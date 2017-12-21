@@ -5,9 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mir3GScripts", "Mir3GScripts\Mir3GScripts.csproj", "{312D710A-96FE-4286-ABBB-D3997E029C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateExample", "DelegateExample\DelegateExample.csproj", "{69FBEB76-A730-404C-9A28-CB9109D37E7F}"
-EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -17,10 +19,6 @@ Global
 		{312D710A-96FE-4286-ABBB-D3997E029C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312D710A-96FE-4286-ABBB-D3997E029C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312D710A-96FE-4286-ABBB-D3997E029C58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69FBEB76-A730-404C-9A28-CB9109D37E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69FBEB76-A730-404C-9A28-CB9109D37E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69FBEB76-A730-404C-9A28-CB9109D37E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69FBEB76-A730-404C-9A28-CB9109D37E7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
