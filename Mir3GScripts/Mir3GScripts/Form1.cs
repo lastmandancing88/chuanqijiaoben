@@ -67,9 +67,10 @@ namespace Mir3GScripts
 
         private void bStart_Click(object sender, EventArgs e)
         {
+            observer.MonsterFoundEvent += player.Attack;
             while (player.IsAlive)
             {
-                observer.MonsterFoundEvent += player.Attack;
+                
             }
         }
     }

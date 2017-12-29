@@ -9,3 +9,8 @@ C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\ob
 C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.exe
 C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.pdb
 C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.Form1.resources
+C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\Mir3GScripts\bin\Debug\Mir3GScripts.exe.config
+C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\Mir3GScripts\obj\Debug\Interop.dm.dll
+C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.csproj.ResolveComReference.cache
+C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.exe
+C:\Users\Nick\Documents\Visual Studio 2015\Projects\Mir3GScripts\Mir3GScripts\Mir3GScripts\obj\Debug\Mir3GScripts.pdb
