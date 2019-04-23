@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace chuanqijiaoben
 {
-    public class Singleton<T> where T: class, new()
-    {
+    public class Singleton<T> where T : class, new()
+    { 
         private static T instance;
         private static readonly object sysLock = new object();
-
         public static T GetInstance()
         {
             if (instance == null)

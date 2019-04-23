@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace chuanqijiaoben
 {
-    public enum Class { 战士 = 1, 法师, 道士 }
+    public enum Verb { 战士 = 1, 法师, 道士 }
     public enum Gender { 男 = 1, 女 }
     public enum ShortCutKey { F1, F2, F3, F4, F5, F6, F7, F8 }
     public enum SkillName { 火球术, 大火球, 地狱火, 火墙, 爆裂火焰 }
@@ -19,7 +19,6 @@ namespace chuanqijiaoben
         string mapName;
         bool transportable;
         List<Coordinate> battlePoint;
-
         public static bool operator ==(Map mapA, Map mapB)
         {
             if (mapA.mapName == mapB.mapName)
@@ -47,7 +46,6 @@ namespace chuanqijiaoben
     {
         public int x;
         public int y;
-
         public static bool operator ==(Coordinate coordinateA, Coordinate coordinateB)
         {
             if (coordinateA.x == coordinateB.x && coordinateA.y == coordinateB.y)
@@ -63,6 +61,19 @@ namespace chuanqijiaoben
                 return true;
         }
     }
-    public struct Skill { SkillName sillName; ShortCutKey shortCutKey; }
-    public struct Scroll { ScrollType scroll; int count; }
+    public struct Role
+    {
+        private Map map;
+        private Coordinate coordinate;
+        private Verb verb;
+        private Gender gender;
+    }
+    public class Game : Singleton<Game>
+    {
+        private Role role;
+        public Game()
+        {
+
+        }
+    }
 }

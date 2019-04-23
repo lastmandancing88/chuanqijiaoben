@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace chuanqijiaoben
 {
-    class Player : Singleton<Player>
+    public sealed class Player : Singleton<Player>
     {
-        public delegate void MoveHandler();
-        public event MoveHandler MoveEvent;
-
-        public Coordinate Coordinate { get; set; }
-        public bool IsAlive { get; set; }
-        public Map CurrentMap { get; set; }
-
-        public void Move(Coordinate coordinate)
+        private static volatile Player instance;
+        private static object syncRoot = new Object();
+        private DM dm;
+        private Game game;
+        public bool Attack(Coordinate coordinate)
         {
-            MoveEvent();
+            return false;
         }
-        public void MoveToMap(Map map)
+        public Player()
         {
-
-        }
-        public void Attack(Monster monster)
-        {
-            DM.GetInstance().Controller.KeyPress(27);
+            dm = DM.GetInstance();
+            game = Game.GetInstance();
         }
     }
 }
