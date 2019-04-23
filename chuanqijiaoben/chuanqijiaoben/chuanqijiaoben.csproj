@@ -78,6 +78,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Attachment\3.1233\大漠接口说明.CHM" />
+    <None Include="Attachment\3.1233\易编学院脚本交流论坛.url" />
+    <None Include="Attachment\3.1233\易编学院脚本交流论坛2.url" />
+    <None Include="Attachment\3.1233\注册大漠插件到系统.bat" />
+    <None Include="Attachment\3.1233\辅助脚本学习交流论坛.url" />
+    <None Include="Attachment\3.1233\辅助脚本学习交流论坛1.url" />
+    <None Include="Attachment\注册大漠插件到系统.bat" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,17 +99,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="dm">
-      <Guid>{84288AAD-BA02-4EF2-85EC-3FAD4D11354D}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Attachment\3.1233\dm.dll" />
+    <Content Include="Attachment\3.1233\RegDll.dll" />
+    <Content Include="Attachment\3.1233\修改记录.txt" />
+    <Content Include="Attachment\3.1233\大漠后台系统.exe" />
+    <Content Include="Attachment\3.1233\大漠综合工具.exe" />
+    <Content Include="Attachment\3.1233\答题器\alarm.mp3" />
+    <Content Include="Attachment\3.1233\答题器\大漠答题器.exe" />
+    <Content Include="Attachment\3.1233\答题器\答题器使用说明.txt" />
+    <Content Include="Attachment\3.1233\获取本机机器码.exe" />
     <Content Include="Attachment\dm.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

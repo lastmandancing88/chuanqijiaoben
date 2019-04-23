@@ -1,1 +1,1 @@
-regsvr32 dm.dll
+regsvr32 Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\Attachment\dm.dll
