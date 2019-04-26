@@ -83,6 +83,10 @@ namespace chuanqijiaoben
             Thread.Sleep(100);
             LeftClick(x, y);
         }
+        public string Ocr(int x1, int y1, int x2, int y2, string color, double sim)
+        {
+            return dm.Ocr(x1, y1, x2, y2, color, sim);
+        }
         public void BindWindow(int hwnd, string display, string mouse, string keypad, int mode)
         {
             dm.BindWindow(hwnd, display, mouse, keypad, mode);

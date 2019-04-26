@@ -15,12 +15,33 @@ namespace chuanqijiaoben
         private Game game;
         public bool Attack(Coordinate coordinate)
         {
+            switch (game.role.verb)
+            {
+                case Verb.战士:
+                    dm.LeftClick(coordinate.x, coordinate.y);
+                    break;
+                case Verb.法师:
+                    break;
+            }
             return false;
         }
         public Player()
         {
             dm = DM.GetInstance();
             game = Game.GetInstance();
+        }
+        public bool HasTarget()
+        {
+            string targetInfo = dm.Ocr(Game.target_status_area[0], Game.target_status_area[0], Game.target_status_area[0], Game.target_status_area[0], Game.kTargetStatusColor, 1.0);
+            if (targetInfo == "")
+            {
+                return false;
+            }
+            else
+            {
+                
+            }
+            return false;
         }
     }
 }
