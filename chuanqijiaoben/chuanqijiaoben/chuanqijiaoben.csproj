@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -101,6 +102,7 @@
     <Content Include="Attachment\3.1233\答题器\答题器使用说明.txt" />
     <Content Include="Attachment\3.1233\获取本机机器码.exe" />
     <Content Include="Attachment\dm.dll" />
+    <Content Include="dm.dll" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Dm">

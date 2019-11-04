@@ -15,7 +15,7 @@ namespace chuanqijiaoben
         private Game game;
         public bool Attack(Coordinate coordinate)
         {
-            switch (game.role.verb)
+            switch (game.Role.verb)
             {
                 case Verb.战士:
                     dm.LeftClick(coordinate.x, coordinate.y);
@@ -28,7 +28,6 @@ namespace chuanqijiaoben
         public Player()
         {
             dm = DM.GetInstance();
-            game = Game.GetInstance();
         }
         public bool HasTarget()
         {

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Xml;
+using System.Collections.Specialized;
 
 namespace chuanqijiaoben
 {
@@ -81,7 +84,20 @@ namespace chuanqijiaoben
             string result = Regex.Match(targetInfo, pattern).Value;
         }
     }
-    public class Game : Singleton<Game>
+    public struct NPC
+    {
+        public string name;
+        public Coordinate coordinate;
+        public string[] dialogues;
+        public NPC(string name, string coordinate, string dialogue) : this()
+        {
+            this.name = name;
+            this.coordinate.x = Convert.ToInt32(coordinate.Split(',')[0]);
+            this.coordinate.y = Convert.ToInt32(coordinate.Split(',')[1]);
+            dialogues = dialogue.Split(',');
+        }
+    }
+    public class Game
     {
         #region 游戏常量信息
         public static string kLifebarColor = "f81010-000000";
@@ -113,10 +129,30 @@ namespace chuanqijiaoben
         public static int[] coordinate_area = { 697, 114, 774, 126 };
         public static int[] life_status_area = { 170, 565, 229, 577 };
         #endregion
-        public Role role;
+        private Role role;
+        private NPC equipmentMendNPC;
+        private NPC potionNPC;
+        private NPC miscNPC;
+        private NPC weaponMendNPC;
+
+        public NPC EquipmentMendNPC { get => equipmentMendNPC; }
+        public NPC PotionNPC { get => potionNPC; }
+        public NPC MiscNPC { get => miscNPC; }
+        public NPC WeaponMendNPC { get => weaponMendNPC; }
+        public Role Role { get => role; set => role = value; }
+
         public Game()
         {
-
+            GetGameSettings();
+        }
+        private void GetGameSettings()
+        {
+            InitalNPC("大善大师");
+        }
+        private NPC InitalNPC(string name)
+        {
+            var npc = ConfigurationManager.GetSection("NPC/"+name) as NameValueCollection;
+            return new NPC(name, npc.Get("坐标"), npc.Get("对话历程"));
         }
     }
 }

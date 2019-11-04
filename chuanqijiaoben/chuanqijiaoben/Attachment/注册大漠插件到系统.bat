@@ -1,1 +1,1 @@
-regsvr32 Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\Attachment\dm.dll
+regsvr32 Z:\нд╦Е\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\Attachment\dm.dll

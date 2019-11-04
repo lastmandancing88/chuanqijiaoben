@@ -6,3 +6,14 @@ Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuan
 Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.CoreCompileInputs.cache
 Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScripts.exe
 Z:\Documents\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScripts.pdb
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csprojAssemblyReference.cache
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Interop.dm.dll
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.ResolveComReference.cache
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.Form1.resources
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScripts.Properties.Resources.resources
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.GenerateResource.cache
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScripts.exe
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScripts.pdb
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.exe.config
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.exe
+Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.pdb

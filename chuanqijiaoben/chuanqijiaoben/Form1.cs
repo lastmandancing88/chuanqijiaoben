@@ -15,22 +15,16 @@ namespace chuanqijiaoben
 {
     public partial class Form1 : Form
     {
-        private Strategy strategy;
-        private Updater updater;
         private Player player;
-        private Observer observer;
+        private Game game;
         public Form1()
         {
             InitializeComponent();
-            this.rbOnFoot.CheckedChanged += new EventHandler(updater.UpdateStrategyMove);
-            this.rbRandomScroll.CheckedChanged += new EventHandler(updater.UpdateStrategyMove);
-            this.rbTransport.CheckedChanged += new EventHandler(updater.UpdateStrategyMove);
-            this.rbStay.CheckedChanged += new EventHandler(updater.UpdateStrategyMove);
-            this.tbRecoverViaTime.ValueChanged += new EventHandler(updater.UpdateStrategyRecoverViaTime);
             Initial();
         }
         void Initial()
         {
+            game = new Game();
             InitialMiscList();
         }
         void InitialMiscList()
@@ -67,11 +61,7 @@ namespace chuanqijiaoben
 
         private void bStart_Click(object sender, EventArgs e)
         {
-            observer.MonsterFoundEvent += player.Attack;
-            while (player.IsAlive)
-            {
-                
-            }
+
         }
     }
 }

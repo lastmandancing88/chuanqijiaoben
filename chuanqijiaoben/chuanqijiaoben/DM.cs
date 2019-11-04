@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dm;
+using dm;
 
 namespace chuanqijiaoben
 {
@@ -86,6 +86,18 @@ namespace chuanqijiaoben
         public string Ocr(int x1, int y1, int x2, int y2, string color, double sim)
         {
             return dm.Ocr(x1, y1, x2, y2, color, sim);
+        }
+        public int FindColor(int x1, int y1, int x2, int y2, string color, double sim, int dir, out object x, out object y)
+        {
+            return dm.FindColor(x1, y1, x2, y2, color, sim, dir, out x, out y);
+        }
+        public string FindStrFastE(int x1, int y1, int x2, int y2, string str, string color, double sim)
+        {
+            return dm.FindStrFastE(x1, y1, x2, y2, str, color, sim);
+        }
+        public int FindStr(int x1, int y1, int x2, int y2, string str, string color, double sim, out object x, out object y)
+        {
+            return dm.FindStr(x1, y1, x2, y2, str, color, sim, out x, out y);
         }
         public void BindWindow(int hwnd, string display, string mouse, string keypad, int mode)
         {
