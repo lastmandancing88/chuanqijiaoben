@@ -11,10 +11,6 @@ using System.Collections.Specialized;
 namespace chuanqijiaoben
 {
     public enum Verb { 战士 = 1, 法师, 道士 }
-    public enum Gender { 男 = 1, 女 }
-    public enum ShortCutKey { F1, F2, F3, F4, F5, F6, F7, F8 }
-    public enum SkillName { 火球术, 大火球, 地狱火, 火墙, 爆裂火焰 }
-    public enum ScrollType { 随机传送卷 = 1, 回城卷 }
     public enum Buff { }
     public enum Resource { 元宝 = 1, 积分, 金币 }
     public enum MoveStrategy { 行走 = 1, 随机传送卷, 瞬息移动, 原地 }
@@ -23,6 +19,28 @@ namespace chuanqijiaoben
         string mapName;
         bool transportable;
         List<Coordinate> battlePoint;
+        int horizontalFactor;
+        int horizontalBase;
+        int mapWidth;
+        int mapHeight;
+        public Map(string mapName) : this()
+        {
+            this.mapName = mapName;
+        }
+        public Map(string mapName, bool transportable, int horizontalBase, int mapHeight, int mapWidth) : this(mapName)
+        {
+            this.transportable = transportable;
+            this.mapWidth = mapWidth;
+            this.mapHeight = mapHeight;
+            this.horizontalBase = horizontalBase;
+            this.horizontalFactor = (800 - horizontalBase) / (mapWidth + 1);
+        }
+        public int HorizontalFactor { get => horizontalFactor; }
+        public int HorizontalBase { get => horizontalBase; }
+        public int MapWidth { get => mapWidth; }
+        public int MapHeight { get => mapHeight; }
+        public string MapName { get => mapName; }
+
         public static bool operator ==(Map mapA, Map mapB)
         {
             if (mapA.mapName == mapB.mapName)
@@ -64,34 +82,27 @@ namespace chuanqijiaoben
             else
                 return true;
         }
-    }
-    public struct Role
-    {
-        public Map map;
-        public Coordinate coordinate;
-        public Verb verb;
-        public Gender gender;
-        public Target target;
-    }
-    public struct Target
-    {
-        public string name;
-        public Coordinate coorninate;
-        public string direction;
-        public Target(string targetInfo) : this()
+        public Coordinate(string x, string y) : this()
         {
-            string pattern = "(?<= [).*? (?= ])";
-            string result = Regex.Match(targetInfo, pattern).Value;
+            this.x = Convert.ToInt32(x);
+            this.y = Convert.ToInt32(y);
+        }
+        public Coordinate(int x, int y) : this()
+        {
+            this.x = x;
+            this.y = y;
         }
     }
     public struct NPC
     {
         public string name;
+        public Map map;
         public Coordinate coordinate;
         public string[] dialogues;
-        public NPC(string name, string coordinate, string dialogue) : this()
+        public NPC(string name, string map, string coordinate, string dialogue) : this()
         {
             this.name = name;
+            this.map = new Map(map);
             this.coordinate.x = Convert.ToInt32(coordinate.Split(',')[0]);
             this.coordinate.y = Convert.ToInt32(coordinate.Split(',')[1]);
             dialogues = dialogue.Split(',');
@@ -129,30 +140,19 @@ namespace chuanqijiaoben
         public static int[] coordinate_area = { 697, 114, 774, 126 };
         public static int[] life_status_area = { 170, 565, 229, 577 };
         #endregion
-        private Role role;
-        private NPC equipmentMendNPC;
-        private NPC potionNPC;
-        private NPC miscNPC;
-        private NPC weaponMendNPC;
-
-        public NPC EquipmentMendNPC { get => equipmentMendNPC; }
-        public NPC PotionNPC { get => potionNPC; }
-        public NPC MiscNPC { get => miscNPC; }
-        public NPC WeaponMendNPC { get => weaponMendNPC; }
-        public Role Role { get => role; set => role = value; }
+        private NPC[] npcs;
+        private Map[] maps;
+        public NPC[] Npcs { get => npcs; set => npcs = value; }
 
         public Game()
         {
-            GetGameSettings();
-        }
-        private void GetGameSettings()
-        {
-            InitalNPC("大善大师");
         }
         private NPC InitalNPC(string name)
         {
-            var npc = ConfigurationManager.GetSection("NPC/"+name) as NameValueCollection;
-            return new NPC(name, npc.Get("坐标"), npc.Get("对话历程"));
+            string[] temp;
+            var npc = ConfigurationManager.GetSection("游戏设定/NPCs") as NameValueCollection;
+            temp = npc.Get(name).Split(';');
+            return new NPC(name, temp[0], temp[1], temp[2]);
         }
     }
 }

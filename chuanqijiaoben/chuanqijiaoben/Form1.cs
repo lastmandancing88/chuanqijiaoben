@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using dm;
 
 namespace chuanqijiaoben
 {
@@ -24,8 +14,8 @@ namespace chuanqijiaoben
         }
         void Initial()
         {
-            game = new Game();
-            InitialMiscList();
+            player = new Player();
+            //InitialMiscList();
         }
         void InitialMiscList()
         {
@@ -61,7 +51,7 @@ namespace chuanqijiaoben
 
         private void bStart_Click(object sender, EventArgs e)
         {
-
+            player.test();
         }
     }
 }

@@ -16,10 +16,12 @@ namespace chuanqijiaoben
     {
         int WM_LBUTTONDOWN = 0x0201;
         int WM_LBUTTONUP = 0x0202;
-        [DllImport("user32.dll", EntryPoint = "PostMessage")]
+        [DllImport("User32.dll", EntryPoint = "SetCursorPos")]
         public static extern bool SetCursorPos(int x, int y);
         [DllImport("User32.dll", EntryPoint = "PostMessage")]
-        public static extern int PostMessage(int hWnd, int Msg, int wParam,  int lParam);
+        public static extern int PostMessage(int hWnd, int Msg, int wParam, int lParam);
+        [DllImport("User32.dll", EntryPoint = "SendMessage")]
+        public static extern int SendMessage(int hWnd, int Msg, int wParam, int lParam);
         /// <summary>
         /// 此函数用以将屏幕坐标x及y组合成为向PostMessage函数lParam传递的实参
         /// </summary>
@@ -72,6 +74,22 @@ namespace chuanqijiaoben
                 throw e;
             }
         }
+        public string Ver()
+        {
+            return dm.Ver();
+        }
+        public int GetLastError()
+        {
+            return dm.GetLastError();
+        }
+        public int SetMouseDelay(string type, int delay)
+        {
+            return dm.SetMouseDelay(type, delay);
+        }
+        public int FindWindow(string windowClass, string title)
+        {
+            return dm.FindWindow(windowClass, title);
+        }
         public void LeftClick(int x, int y)
         {
             PostMessage(hwnd, WM_LBUTTONDOWN, x, y);
@@ -83,6 +101,14 @@ namespace chuanqijiaoben
             Thread.Sleep(100);
             LeftClick(x, y);
         }
+        public int RightClick()
+        {
+            return dm.RightClick();
+        }
+        public int MoveTo(int x, int y)
+        {
+            return dm.MoveTo(x, y);
+        }
         public string Ocr(int x1, int y1, int x2, int y2, string color, double sim)
         {
             return dm.Ocr(x1, y1, x2, y2, color, sim);
@@ -90,6 +116,10 @@ namespace chuanqijiaoben
         public int FindColor(int x1, int y1, int x2, int y2, string color, double sim, int dir, out object x, out object y)
         {
             return dm.FindColor(x1, y1, x2, y2, color, sim, dir, out x, out y);
+        }
+        public string FindColorE(int x1, int y1, int x2, int y2, string color, double sim, int dir)
+        {
+            return dm.FindColorE(x1, y1, x2, y2, color, sim, dir);
         }
         public string FindStrFastE(int x1, int y1, int x2, int y2, string str, string color, double sim)
         {
@@ -99,10 +129,18 @@ namespace chuanqijiaoben
         {
             return dm.FindStr(x1, y1, x2, y2, str, color, sim, out x, out y);
         }
+        public string FindMultiColorE(int x1, int y1, int x2, int y2, string first_color, string offset_color,double sim, int dir)
+        {
+            return dm.FindMultiColorE(x1, y1, x2, y2, first_color, offset_color, sim, dir);
+        }
         public void BindWindow(int hwnd, string display, string mouse, string keypad, int mode)
         {
             dm.BindWindow(hwnd, display, mouse, keypad, mode);
             this.hwnd = hwnd;
+        }
+        public int CmpColor(int x, int y, string color, int sim)
+        {
+            return dm.CmpColor(x, y, color, sim);
         }
         #region 继承释放接口方法
         public void Dispose()
