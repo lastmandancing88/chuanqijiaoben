@@ -7,8 +7,8 @@
     <ProjectGuid>{312D710A-96FE-4286-ABBB-D3997E029C58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mir3GScripts</RootNamespace>
-    <AssemblyName>Mir3GScripts</AssemblyName>
+    <RootNamespace>chuanqijiaoben</RootNamespace>
+    <AssemblyName>chuanqijiaoben</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -57,7 +57,8 @@
     <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Script.cs" />
     <Compile Include="Singleton.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -70,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Attachment\3.1233\大漠接口说明.CHM" />
     <None Include="Attachment\3.1233\易编学院脚本交流论坛.url" />
@@ -77,7 +79,6 @@
     <None Include="Attachment\3.1233\注册大漠插件到系统.bat" />
     <None Include="Attachment\3.1233\辅助脚本学习交流论坛.url" />
     <None Include="Attachment\3.1233\辅助脚本学习交流论坛1.url" />
-    <None Include="Attachment\注册大漠插件到系统.bat" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,11 +102,32 @@
     <Content Include="Attachment\3.1233\答题器\大漠答题器.exe" />
     <Content Include="Attachment\3.1233\答题器\答题器使用说明.txt" />
     <Content Include="Attachment\3.1233\获取本机机器码.exe" />
-    <Content Include="Attachment\dm.dll" />
-    <Content Include="dm.dll" />
+    <None Include="Resources\紫霞神女-1.bmp" />
+    <None Include="Resources\状态.bmp" />
+    <None Include="Resources\中地图.bmp" />
+    <None Include="Resources\小地图.bmp" />
+    <None Include="Resources\向下.bmp" />
+    <None Include="Resources\无地图-1.bmp" />
+    <None Include="Resources\万年雪霜.bmp" />
+    <None Include="Resources\思母花4.bmp" />
+    <None Include="Resources\思母花3.bmp" />
+    <None Include="Resources\思母花2.bmp" />
+    <None Include="Resources\思母花1.bmp" />
+    <None Include="Resources\思母花0.bmp" />
+    <None Include="Resources\思母花.bmp" />
+    <None Include="Resources\玫瑰4.bmp" />
+    <None Include="Resources\玫瑰3.bmp" />
+    <None Include="Resources\玫瑰2.bmp" />
+    <None Include="Resources\玫瑰1.bmp" />
+    <None Include="Resources\玫瑰0.bmp" />
+    <None Include="Resources\玫瑰.bmp" />
+    <None Include="Resources\疾风神水.bmp" />
+    <None Include="Resources\回城卷.bmp" />
+    <None Include="Resources\大地图.bmp" />
+    <None Include="Resources\超级冰泉圣水.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Dm">
+    <COMReference Include="dm">
       <Guid>{84288AAD-BA02-4EF2-85EC-3FAD4D11354D}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
@@ -114,6 +136,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attachment\Strategys\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

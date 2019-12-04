@@ -1,57 +1,73 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace chuanqijiaoben
 {
     public partial class Form1 : Form
     {
-        private Player player;
-        private Game game;
+        private static Game game;
+        private static bool flag = true;
+        private Script script;
         public Form1()
         {
             InitializeComponent();
+            game = new Game();
+            script = new Script();
             Initial();
         }
-        void Initial()
+        private void Initial()
         {
-            player = new Player();
-            //InitialMiscList();
+            this.cbAutoUseStatusPotion.Checked = script.AutoList[cbAutoUseStatusPotion.Text];
         }
-        void InitialMiscList()
+        private void InitialMiscList()
         {
-            lvMiscs.GridLines = true; //显示表格线
-            lvMiscs.View = View.Details;//显示表格细节
-            lvMiscs.LabelEdit = true; //是否可编辑,ListView只可编辑第一列。
-            lvMiscs.Scrollable = true;//有滚动条
-            lvMiscs.HeaderStyle = ColumnHeaderStyle.Clickable;//对表头进行设置
-            lvMiscs.FullRowSelect = true;//是否可以选择行
-
-            //this.lvMiscs.HotTracking = true;// 当选择此属性时则HoverSelection自动为true和Activation属性为oneClick
-            //this.listView1.HoverSelection = true;
-            //this.listView1.Activation = ItemActivation.Standard; //
-            //添加表头
-            lvMiscs.Columns.Add("", 20);
-            lvMiscs.Columns.Add("Name", 100);
-            lvMiscs.Columns.Add("Count", 80);
-            //添加各项
-            ListViewItem[] p = new ListViewItem[2];
-            p[0] = new ListViewItem(new string[] { "", "万年雪霜", "1000" });
-            p[1] = new ListViewItem(new string[] { "", "回城卷", "50" });
-            //p[0].SubItems[0].BackColor = Color.Red; //用于设置某行的背景颜色
-
-            this.lvMiscs.Items.AddRange(p);
-            //也可以用this.listView1.Items.Add();不过需要在使用的前后添加Begin... 和End...防止界面自动刷新
-            // 添加分组
-            //this.lvMiscs.Groups.Add(new ListViewGroup("tou"));
-            //this.lvMiscs.Groups.Add(new ListViewGroup("wei"));
-
-            //this.lvMiscs.Items[0].Group = this.lvMiscs.Groups[0];
-            //this.lvMiscs.Items[1].Group = this.lvMiscs.Groups[1];
         }
-
         private void bStart_Click(object sender, EventArgs e)
         {
-            player.test();
+            game.Initial();
+            //Thread t1 = new Thread(new ThreadStart(RemainWeightWatcherThread));
+            //t1.Start();
+            //while (!game.role.MovetoCoordinate(new Coordinate(284,143)))
+            //{
+
+            //}
+            Monster monster = game.role.SearchMonster(7);
+            game.role.PhysicalAttack(monster.Position);
+        }
+        public static void RemainWeightWatcherThread()
+        {
+            Thread.Sleep(1000 * 5);
+            while (true)
+            {
+                flag = false;
+            }
+        }
+        public void BattleMode()
+        {
+
+        }
+
+        private void cbMend_CheckedChanged(object sender, EventArgs e)
+        {
+            string name = ((CheckBox)sender).Text;
+        }
+        private void tcMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            script.Mode = tcMode.SelectedTab.Text;
+        }
+        private void tcMoveMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            script.MoveMethod = tcMoveMode.SelectedTab.Text;
+        }
+        private void checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            script.AutoList[((CheckBox)sender).Text] = ((CheckBox)sender).Checked;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            script.SaveSetting(script);
         }
     }
 }

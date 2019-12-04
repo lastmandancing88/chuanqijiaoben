@@ -1,1 +1,0 @@
-regsvr32 Z:\нд╦Е\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\Attachment\dm.dll

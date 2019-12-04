@@ -17,3 +17,15 @@ Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Mir3GScr
 Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.exe.config
 Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.exe
 Z:\文稿\GitHub\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\Mir3GScripts.pdb
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\Interop.Dm.dll
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.ResolveComReference.cache
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.Form1.resources
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.GenerateResource.cache
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csproj.CoreCompileInputs.cache
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.csprojAssemblyReference.cache
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.Properties.Resources.resources
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\chuanqijiaoben.exe.config
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\chuanqijiaoben.exe
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\bin\Debug\chuanqijiaoben.pdb
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.exe
+C:\Users\lastm\Source\Repos\lastmandancing88\chuanqijiaoben\chuanqijiaoben\chuanqijiaoben\obj\Debug\chuanqijiaoben.pdb
